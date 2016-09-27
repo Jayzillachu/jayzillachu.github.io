@@ -91,6 +91,13 @@ p {
 	min-height: 100%;
 }
 
+.navbar-header {
+	.navbar-toggle {
+		float: left;
+		margin-right: 20px;
+	}
+}
+
 
 
 @keyframes fadeIn {
