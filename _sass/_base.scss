@@ -16,7 +16,7 @@ body {
 	//background-color: $color-highlight;	
 }
 .header {
-	margin-top: 100px;
+	//margin-top: 5px;
 	background: $light-grey;
 }
 
@@ -54,6 +54,13 @@ body {
 	border-style: solid;
 	border: 2px;
 	border-color: $red;
+	.fa {
+		-webkit-animation-name: pulsate; /* Chrome, Safari, Opera */
+	    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+	    animation-name: pulsate;
+	    animation-duration: 2s;
+	    -webkit-animation-iteration-count: infinite; 
+	}
 }
 
 .section-1 { 
@@ -98,6 +105,14 @@ p {
 	}
 }
 
+.navbar {
+	background: $teal;
+}
+
+.navbar-header .navbar-default .navbar-nav>li>a {
+	color: $red;
+}
+
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         display: inline-block;
@@ -110,10 +125,53 @@ p {
     }
 }
 
+#hero {
+	-webkit-animation-name: slideIn; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: slideIn;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite; 
+}
+
 
 @keyframes fadeIn {
     0%   {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@keyframes pulsate {
+	 0% {-webkit-transform: scale(1, 1);}
+    100% {-webkit-transform: scale(1.2, 1.2);}
+}
+
+.fa:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes slideIn {
+	0% {right:100px;}
+	100% { right:0px;}
 }
 
 
